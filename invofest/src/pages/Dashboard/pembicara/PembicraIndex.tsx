@@ -37,7 +37,7 @@ export default function PembicraIndex() {
             <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-gray-800">Kelola Pembicara</h2>
                 <button 
-                    onClick={() => navigate("/Dashboard/pembicara/pembicaracreate")}
+                    onClick={() => navigate("/Dashboard/pembicara/create")}
                     className="bg-[#7A1D3A] text-white px-5 py-2 rounded-lg hover:bg-rose-900 font-medium"
                 >
                     + Tambah Pembicara
@@ -60,7 +60,7 @@ export default function PembicraIndex() {
                                 <td className="p-4 text-gray-600 text-sm">{p.role}</td>
                                 <td className="p-4 text-center space-x-4">
                                     <button 
-                                        onClick={() => navigate("/Dashboard/pembicara/pembicaracreate", { state: { pembicara: p } })}
+                                        onClick={() => navigate("/Dashboard/pembicara/edit", { state: { pembicara: p } })}
                                         className="text-blue-600 hover:text-blue-800 font-medium"
                                     >
                                         Edit
