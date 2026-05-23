@@ -12,16 +12,13 @@ import Daftar from "./pages/Daftar";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import DashboardLayouts from "./layouts/DashboardLayouts";
-
-// Import Sisi Index Tabel
 import CategoryIndex from "./pages/Dashboard/category/CategoryIndex";
 import PembicraIndex from "./pages/Dashboard/pembicara/PembicraIndex";
 import EventIndex from "./pages/Dashboard/event/EventIndex";
-
-// Import Sisi Form CRUD Terpadu
 import CategoryCRUD from "./pages/Dashboard/category/CategoryCRUD";
 import PembicaraCRUD from "./pages/Dashboard/pembicara/PembicaraCRUD";
 import EventCRUD from "./pages/Dashboard/event/EventCRUD";
+import Biodata from "./pages/Biodata";
 
 function App() {
   return (
@@ -34,6 +31,7 @@ function App() {
           <Route path="/competition" element={<Competition />} />
           <Route path="/talkshow" element={<Talkshow />} />
           <Route path="/Workshop" element={<Workshop />} />
+          <Route path="/biodata" element={<Biodata />} />
         </Route>
 
         {/* rute auth */}
