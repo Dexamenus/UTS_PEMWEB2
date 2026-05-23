@@ -1,4 +1,4 @@
-import { Home, Trophy, PresentationIcon, Mic, Laptop2, UserCircle } from "lucide-react";
+import { Home, Trophy, PresentationIcon, Mic, Laptop2, UserCircle, User } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export const Header: React.FC = () => {
@@ -10,6 +10,7 @@ export const Header: React.FC = () => {
     { label: "Seminar", href: "/Seminar", icon: <PresentationIcon size={19} /> },
     { label: "Workshop", href: "/Workshop", icon: <Laptop2 size={19} /> },
     { label: "TalkShow", href: "/Talkshow", icon: <Mic size={19} /> },
+    { label: "Biodata", href: "/biodata", icon: <User size={19} /> }
   ];
   return (
     <header className=" bg-white shadow-sm px-6 py-2">
