@@ -60,7 +60,7 @@ export default function PembicraIndex() {
                                 <td className="p-4 text-gray-600 text-sm">{p.role}</td>
                                 <td className="p-4 text-center space-x-4">
                                     <button 
-                                        onClick={() => navigate("/Dashboard/pembicara/edit", { state: { pembicara: p } })}
+                                        onClick={() => navigate("/Dashboard/pembicara/create", { state: { pembicara: p } })}
                                         className="text-blue-600 hover:text-blue-800 font-medium"
                                     >
                                         Edit
