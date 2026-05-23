@@ -5,7 +5,7 @@ function ProtectedRoute() {
 
     // Jika pengguna tidak terautentikasi, arahkan ke halaman login
     if (!isAuthenticated) {
-        return <Navigate to="/login" replace />;
+        return <Navigate to="/Login" replace />;
     }
     // Jika pengguna terautentikasi, render komponen anak (Outlet)
     return <Outlet />;
