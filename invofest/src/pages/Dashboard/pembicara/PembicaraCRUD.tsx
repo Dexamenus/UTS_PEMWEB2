@@ -30,8 +30,7 @@ export default function PembicaraCRUD() {
             ? `https://backend-omega-ten-46.vercel.app/pembicara/${editingData.id}` 
             : "https://backend-omega-ten-46.vercel.app/pembicara";
         
-        // Gunakan PATCH jika edit, POST jika tambah baru
-        const method = editingData ? "PATCH" : "POST";
+        const method = editingData ? "PUT" : "POST";
 
         try {
             const res = await fetch(url, {

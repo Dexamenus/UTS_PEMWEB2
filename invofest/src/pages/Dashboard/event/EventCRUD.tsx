@@ -39,7 +39,7 @@ export default function EventCRUD() {
         const url = editingData 
             ? `https://backend-omega-ten-46.vercel.app/events/${editingData.id}` 
             : "https://backend-omega-ten-46.vercel.app/events";
-        const method = editingData ? "PATCH" : "POST";
+        const method = editingData ? "PUT" : "POST";
 
         try {
             const res = await fetch(url, {

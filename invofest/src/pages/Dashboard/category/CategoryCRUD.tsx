@@ -24,7 +24,7 @@ export default function CategoryCRUD() {
             ? `https://backend-omega-ten-46.vercel.app/categories/${editingData.id}` 
             : "https://backend-omega-ten-46.vercel.app/categories";
             
-        const method = editingData ? 'PATCH' : 'POST';
+        const method = editingData ? 'PUT' : 'POST';
 
         try {
             const response = await fetch(url, {
