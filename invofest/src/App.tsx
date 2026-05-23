@@ -12,17 +12,22 @@ import Daftar from "./pages/Daftar";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import DashboardLayouts from "./layouts/DashboardLayouts";
+
+// Import Sisi Index Tabel
 import CategoryIndex from "./pages/Dashboard/category/CategoryIndex";
-import EventIndex from "./pages/Dashboard/event/EventIndex";
 import PembicraIndex from "./pages/Dashboard/pembicara/PembicraIndex";
-import CategoryCreate from "./pages/Dashboard/category/CategoryCreate";
-import PembicaraCreate from "./pages/Dashboard/pembicara/PembicaraCreate";
-import EventCreate from "./pages/Dashboard/event/EventCreate";
+import EventIndex from "./pages/Dashboard/event/EventIndex";
+
+// Import Sisi Form CRUD Terpadu
+import CategoryCRUD from "./pages/Dashboard/category/CategoryCRUD";
+import PembicaraCRUD from "./pages/Dashboard/pembicara/PembicaraCRUD";
+import EventCRUD from "./pages/Dashboard/event/EventCRUD";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* rute publik */}
         <Route element={<MainLayouts />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/seminar" element={<Seminar />} />
@@ -31,21 +36,27 @@ function App() {
           <Route path="/Workshop" element={<Workshop />} />
         </Route>
 
+        {/* rute auth */}
         <Route element={<AuthLayout />}>
           <Route path="/Login" element={<LoginForm />} />
           <Route path="/Register" element={<RegisterForm />} />
           <Route path="/Daftar" element={<Daftar />} />
         </Route>
 
+        {/* rute terproteksi dashboard admin */}
         <Route element={<ProtectedRoute />}>
           <Route element={<DashboardLayouts />}>
             <Route path="/Dashboard" element={<DashboardIndex />} />
+            
+            {/* Navigasi Utama List Tabel */}
             <Route path="/Dashboard/category" element={<CategoryIndex />} />
             <Route path="/Dashboard/pembicara" element={<PembicraIndex />} />
             <Route path="/Dashboard/event" element={<EventIndex />} />
-            <Route path="/Dashboard/category/create" element={<CategoryCreate />} />
-            <Route path="/Dashboard/pembicara/pembicaracreate" element={<PembicaraCreate />} />
-            <Route path="/Dashboard/event/create" element={<EventCreate />} />
+            
+            {/* Navigasi Aksi Form CRUD */}
+            <Route path="/Dashboard/category/create" element={<CategoryCRUD />} />
+            <Route path="/Dashboard/pembicara/create" element={<PembicaraCRUD />} />
+            <Route path="/Dashboard/event/create" element={<EventCRUD />} />
           </Route>
         </Route>
 

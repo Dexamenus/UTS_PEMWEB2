@@ -34,12 +34,12 @@ export default function LoginForm() {
 
     const onSubmit = (data: FormData) => {
     console.log("Login sukses:", data);
-    if (data.email === "abdan@gmail.com" && data.password === "abdan123") {
+    if (data.email === "24090104@gmail.com" && data.password === "24090104") {
         alert("Login berhasil!");
         login(data.email);
         navigate("/Dashboard", { replace: true });
     } else {
-        alert("Login gagal: abdan@gmail.com / abdan123");
+        alert("Login gagal: 24090104@gmail.com / 24090104");
     }
 };
     return (
